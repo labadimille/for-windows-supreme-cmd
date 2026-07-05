@@ -1,0 +1,4 @@
+# Minimal requirements for stubbed project
+
+# Add required packages as needed
+

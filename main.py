@@ -66,8 +66,8 @@ def main():
 
     am = ActionManager()
 
-    print("[JARVIS] 🔌 Starting expanded runtime...")
-    print("[JARVIS] ✅ Ready (expanded minimal). Type 'help' for commands.")
+    print("[JARVIS] Starting expanded runtime...")
+    print("[JARVIS] Ready (expanded minimal). Type 'help' for commands.")
 
     try:
         while True:
@@ -77,7 +77,7 @@ def main():
             parts = raw.split(' ', 2)
             cmd = parts[0].strip().lower()
             if cmd in ('exit', 'quit'):
-                print('[JARVIS] 👋 Shutting down.')
+                print('[JARVIS] Shutting down.')
                 break
             if cmd == 'help':
                 print_help()
@@ -109,7 +109,7 @@ def main():
                 continue
             print(f"[JARVIS] Unknown command: {raw}")
     except (KeyboardInterrupt, EOFError):
-        print('\n[JARVIS] 👋 Interrupted, exiting.')
+        print('\n[JARVIS] Interrupted, exiting.')
     finally:
         ui.stop()
 
