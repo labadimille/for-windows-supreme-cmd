@@ -1,7 +1,12 @@
+import webbrowser
+from urllib.parse import quote_plus
+
+
 def web_search(query: str):
-    """Stub: perform a fake web search and print top result."""
+    """Open a browser search for the given query using DuckDuckGo."""
     query = query or ''
     print(f"[ACTION] Searching the web for: {query}")
-    # Fake result
-    print(f"[ACTION] Top result: 'Result for {query}'")
-    return {"query": query, "top_result": f"Result for {query}"}
+    url = f"https://duckduckgo.com/?q={quote_plus(query)}"
+    webbrowser.open(url)
+    print(f"[ACTION] Opened browser to: {url}")
+    return {"query": query, "url": url}
